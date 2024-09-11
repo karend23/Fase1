@@ -1,0 +1,209 @@
+<!--Traiga la plantilla -->
+{% extends "layout.html" %}
+
+{% block content%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre Zipaquirá</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+<body>
+
+    <nav class="nav">
+
+        <a href="#Bienvenidos">Inicio</a>
+        <a href="#info">Biodiversidad </a>
+        <a href="#Galeria">Galería Interactiva</a>
+        <a href="#">Contáctenos</a>
+        <a href="#">Blog</a>
+
+    </nav>
+
+
+    <div class="i">
+        <h2 class="primero"> Ingresa a tu portal para la gestión de usuarios.</h2>
+        <a href="{{ url_for('login')}}" class="btn btn-primary">Ingresar</a>
+    </div>
+    <br>
+    <header class="header">
+        <!--Menu-->
+        <br><br>
+        <br><br>
+        <section class="Texto">
+            <h1 class="textop">Biodiversidad en Zipaquirá</h1>
+            <br>
+            <br>
+
+        </section>
+        <br>
+        <div class="ola" style="height: 100px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.39,181.09 281.31,28.13 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke:#ffffff; fill: #ffffff;"></path>
+            </svg></div>
+    </header>
+    <br><br>
+    <main>
+        <section class="contenedor Biodiversidad" id="Bienvenidos">
+            <h2 class="titulo"> Bienvenidos</h2>
+            <p class="bienvenido"> Explora el asombroso y biodiverso mundo del Municipio de Zipaquirá, Cundinamarca;
+                donde la magia y la majestuosidad se funden en un encanto perpetuo.</p>
+            <br><br><br><br>
+            <hr>
+            <hr>
+            <br><br>
+
+            <div class="contenedor-biodiversidad" id="info">
+                <img src="{{url_for('static', filename='imagenes/frailejon.jpg')}}" alt="" class="imagen-bio">
+                <div class="contenido-texto">
+                    <h3 class="t1"> Datos importantes</h3>
+                    <p class="p1">
+                        Zipaquirá es una ciudad ubicada en el departamento de Cundinamarca, Colombia; se caracteriza por
+                        tener una
+                        biodiversidad rica debido a su posición geográfica en la cordillera de los Andes.
+                        Incluye ecosistemas como bosques de niebla, páramos y subpáramos, los cuales son fundamentales
+                        para la regulación del ciclo del agua y la captura de carbono.
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+
+        <hr>
+        <hr>
+        <br>
+
+
+        <section id="Galeria">
+            <h2 class="tg"> Galería - Descubre el encanto</h2>
+            <h3> Flora</h3>
+            <div class="container">
+                <div class="card">
+                    <img src="{{url_for('static', filename='imagenes/arbol.jpg')}}" alt="Arbol" class="imagen-arbol">
+                    <div class="contenido">
+                        <h3>Encenillo</h3>
+                        <p>Especie nativa de los Andes</p>
+                        <button class="learn-more"
+                            data-info="Desempeña un papel crucial en la regulación hídrica del ecosistema andino, ayudando a la retención de agua en los suelos. Además, proporciona hábitat y alimento para diversas especies de fauna, incluyendo aves e insectos.
+En Zipaquirá y sus alrededores, los bosques de encenillo son importantes para la conservación de la biodiversidad y la protección de las cuencas hidrográficas.">Saber
+                            más</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{url_for('static', filename='imagenes/roble.jpg')}}" alt="Roble" class="imagen-roble">
+                    <div class="contenido">
+                             <h3>Roble</h3>
+                             <p>Especie de árbol nativo de los Andes</p>
+                            <button class="learn-more"
+                                    data-info="Proporciona hábitat y alimento para muchas especies de fauna, incluyendo aves, mamíferos e insectos. Además, estos bosques son cruciales para la regulación hídrica, ya que contribuyen a la captación y almacenamiento de agua, así como a la protección de cuencas hidrográficas.">Saber
+                                    más</button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="{{url_for('static', filename='imagenes/paramo.jpg')}}" alt="Paramo" class="imagen-paramo">
+                            <div class="contenido">
+                                    <h3>Frailejón</h3>
+                                    <p>Planta icónica de los páramos andinos</p> 
+                                    <button class="learn-more"
+                                            data-info="Es crucial para la regulación hídrica de los páramos. Sus hojas y su estructura ayudan a captar la humedad del aire y del agua de lluvia, la cual es liberada lentamente hacia el suelo, alimentando las fuentes de agua que abastecen ríos y lagos en las partes bajas.
+        Aunque no es común encontrar frailejones directamente en Zipaquirá, en las áreas de páramo cercanas, como el Páramo de Guerrero, se pueden encontrar estas plantas">Saber
+                                            más</button>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <img src="{{url_for('static', filename='imagenes/orquidea.jpg')}}" alt="Flor" class="imagen-orquidea">
+                                    <div class="contenido">
+                                                <h3>Orquídea</h3>
+                                                <p>Flor representativa de los ecosistemas andinos</p>
+                                                <button class="learn-more"
+                                                            data-info="Desempeñan un papel importante en los ecosistemas, ya que son polinizadas por una gran variedad de insectos, especialmente abejas y mariposas, contribuyendo así a la biodiversidad de los bosques andinos. Además, algunas especies de orquídeas tienen relaciones simbióticas con hongos que les ayudan a absorber nutrientes del suelo.">Saber
+                                                            más</button>
+                                                    </div>
+                                                </div>        
+                                        </div>         
+                                                              
+                        </section>
+                        
+                        <h3> Fauna</h3>
+                        <div class="container">
+                            <div class="card">
+                                <img src="{{url_for('static', filename='imagenes/danta.jpg')}}" alt="Danta" class="imagen-danta">
+                                <div class="contenido">
+                                    <h3>Danta de montaña</h3>
+                                    <p>Especie de mamífero</p>
+                                    <button class="learn-more"
+                                        data-info="Habita en los bosques nublados y páramos de los Andes, incluyendo algunas áreas cercanas a Zipaquirá. La danta de montaña juega un papel crucial en el ecosistema, ya que es un dispersor de semillas, ayudando a mantener la diversidad vegetal en los bosques andinos. Al moverse por grandes áreas, las dantas dispersan las semillas de las plantas que consumen, facilitando la regeneración del bosque.">Saber
+                                        más</button>
+                                </div>
+                            </div>
+            
+                            <div class="card">
+                                <img src="{{url_for('static', filename='imagenes/colibri.jpg')}}" alt="" class="imagen-colibri">
+                                <div class="contenido">
+                                    <h3>Colibrí</h3>
+                                    <p>Ave emblemática de la región.</p>
+                                    <button class="learn-more"
+                                        data-info="Son aves pequeñas y vibrantes que se encuentran comúnmente en la región de Zipaquirá, especialmente en los bosques y jardines donde hay abundancia de flores. Estas aves son conocidas por su capacidad única para volar en todas direcciones, incluso hacia atrás, gracias a sus alas que baten a gran velocidad.Los colibríes son polinizadores esenciales en los ecosistemas andinos. Al alimentarse del néctar, transportan polen de una flor a otra, facilitando la reproducción de numerosas plantas. Este papel es vital para la conservación de la biodiversidad en los bosques y jardines de Zipaquirá.">Saber
+                                        más</button>
+                                </div>
+                            </div>
+            
+                            <div class="card">
+                                <img src="{{url_for('static', filename='imagenes/condor.jpg')}}" alt="Condor" class="imagen-condor">
+                                <div class="contenido">
+                                    <h3>Condor</h3>
+                                    <p>Símbolo emblemático</p>
+                                    <button class="learn-more"
+                                        data-info="Así como en muchas otras regiones de los Andes. Este majestuoso ave es una de las más grandes del mundo en términos de envergadura y es conocido por su impresionante vuelo. Aunque su hábitat natural se encuentra a lo largo de la cordillera de los Andes, su presencia en la cultura y el folclore local es notable.
+            En Zipaquirá, como en otras zonas de Colombia, el cóndor representa la libertad y la fuerza. Este ave es un ícono de la biodiversidad en la región, y su conservación es de gran importancia debido a su condición vulnerable.">Saber
+                                        más</button>
+                                </div>
+                            </div>
+            
+                            <div class="card">
+                                <img src="{{url_for('static', filename='imagenes/oso.jpg')}}" alt="" class="imagen-oso"> 
+                                <div class="contenido">
+                                    <h3>Oso de anteojos</h3>
+                                    <p>Guardian de los bosques andinos</p>
+                                    <button class="learn-more"
+                                        data-info="El oso de anteojos es una especie omnívora cuya dieta incluye principalmente plantas, semillas y ocasionalmente proteínas animales. Su papel en el ecosistema es vital, ya que actúa como dispersor de semillas y contribuye a la regeneración del bosque al derribar arbustos.">Saber
+                                        más</button>
+                                </div>
+                            </div> 
+                       <br><br> <br> <br> <br> <br>
+                </main>
+            
+                <footer>
+                    <div class="contenedor-footer">
+                        <div class="content-footer">
+                            <p>&copy; Karen Diaz</p>
+                            <h4>2024</h4>
+            
+                        </div>
+                    </div>
+            
+                </footer>
+            
+                <script src="{{url_for('static', filename='js/js.js')}}"></script>
+            </body>
+            
+            
+            
+
+
+
+</html>
+
+{% endblock %}
